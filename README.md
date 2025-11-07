@@ -1,7 +1,10 @@
 # metal-repo
-A repository to log metal albuns, rate songs, comment reviews and keep track of your personal metal taste.
+
+A repository to log metal albums, rate songs, comment reviews and keep track of
+your personal metal taste.
 
 ## To-do
+
 - Connect to [Metal-API](https://metal-api.dev/index.html)
 - List bands and albuns
 - Add albuns to a "Listened to" list
