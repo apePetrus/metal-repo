@@ -24,3 +24,26 @@ your personal metal taste.
 - [ ] Add origin country field
 - [ ] Add genre field (input of type select)
 - [ ] Add activity status field (input of type select)
+- [ ] Create simple table on SQLite to store those info
+
+### band table
+
+- [ ] cdband integer primary key
+- [ ] nmband varchar(50) not null
+- [ ] cdcountry integer -- Must map to country.cdcountry
+- [ ] fgstatus integer --  1 (active), 2 (split-up), 3 (changed name), 4 (unknown)
+
+### country table
+
+- [ ] cdcountry integer primary key
+- [ ] nmcountry varchar(50) not null
+
+### genre table
+
+- [ ] cdgenre integer primary key
+- [ ] nmgenre varchar(20) not null
+
+### bandgenre table
+
+- [ ] cdband integer not null -- Must map to band.cdband
+- [ ] cdgenre integer not null -- Must map to genre.cdgenre
