@@ -28,22 +28,22 @@ your personal metal taste.
 
 ### band table
 
-- [ ] cdband integer primary key
-- [ ] nmband varchar(50) not null
-- [ ] cdcountry integer -- Must map to country.cdcountry
-- [ ] fgstatus integer --  1 (active), 2 (split-up), 3 (changed name), 4 (unknown)
+- [x] cdband integer primary key
+- [x] nmband varchar(50) not null
+- [x] cdcountry integer -- Must map to country.cdcountry
+- [x] fgstatus integer --  1 (active), 2 (split-up), 3 (changed name), 4 (unknown)
 
 ### country table
 
-- [ ] cdcountry integer primary key
-- [ ] nmcountry varchar(50) not null
+- [x] cdcountry integer primary key
+- [x] nmcountry varchar(50) not null
 
 ### genre table
 
-- [ ] cdgenre integer primary key
-- [ ] nmgenre varchar(20) not null
+- [x] cdgenre integer primary key
+- [x] nmgenre varchar(20) not null
 
 ### bandgenre table
 
-- [ ] cdband integer not null -- Must map to band.cdband
-- [ ] cdgenre integer not null -- Must map to genre.cdgenre
+- [x] cdband integer not null -- Must map to band.cdband
+- [x] cdgenre integer not null -- Must map to genre.cdgenre
