@@ -15,3 +15,12 @@ your personal metal taste.
 - Add albums to a "Plan to listen" list
 - Rate artists
 - Take notes to most liked metal genres, most liked albums, most liked bands
+
+## First things first band to-do list
+
+- [x] Simple CRUD to append a band name from a form to a variable
+- [x] Route form submit to a POST route on Flask and return back to index
+- [x] Basic HTML to render bands table
+- [ ] Add origin country field
+- [ ] Add genre field (input of type select)
+- [ ] Add activity status field (input of type select)
