@@ -25,6 +25,8 @@ your personal metal taste.
 - [ ] Add genre field (input of type select)
 - [ ] Add activity status field (input of type select)
 - [ ] Create simple table on SQLite to store those info
+- [ ] For SQLite FK enforcements, run ```PRAGMA foreign_keys = ON```
+- [ ] Create enum file for band table fgstatus column
 
 ### band table
 
