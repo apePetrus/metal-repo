@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+	{{ super() }}
+	<style type="text/css">
+		.welcome { color: #336699; }
+	</style>
+{% endblock %}
+{% block content %}
+	<h1>Metal Repo</h1>
+	<p class="welcome">
+		This is Metal Repo
+	</p>
+	<br><br>
+
+	<form method="POST" action="{{ url_for("add_band") }}">
+		<fieldset>
+			<legend>Band register</legend>
+			<div id="form-field">
+				<label for="band_name">Name</label><br>
+				<input type="text" name="band_name">
+			</div>
+
+			<br>
+			<input type="submit" value="Add band">
+		</fieldset>
+	</form>
+
+	<br><br>
+
+	<table>
+		<thead>
+			<tr>
+				<th scope="col">Band name</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			{% for band in bands %}
+				<tr>
+					<th scope="row">{{ band }}</th>
+				</tr>
+			{% endfor %}
+		</tbody>
+
+	</table>
+{% endblock %}
