@@ -1,4 +1,13 @@
 from flask import Flask, redirect, render_template, request, url_for
+import sqlite3
+from sql_query.get_band_sql import getBandSql
+
+
+def get_db_connection():
+    conn = sqlite3.connect("./db/metal-repo.db")
+    conn.row_factory = sqlite3.Row
+    return conn
+
 
 app = Flask(__name__)
 
@@ -7,7 +16,11 @@ band_array = []
 
 @app.route("/")
 def index():
-    return render_template("index.html", bands=band_array)
+    conn = get_db_connection()
+    bands = conn.execute(getBandSql.get_sql).fetchall()
+    conn.close()
+
+    return render_template("index.html", bands=bands)
 
 
 @app.route("/add", methods=["POST"])
