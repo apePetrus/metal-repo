@@ -22,11 +22,13 @@ your personal metal taste.
 - [x] Route form submit to a POST route on Flask and return back to index
 - [x] Basic HTML to render bands table
 - [ ] Add origin country field
-- [ ] Add genre field (input of type select)
+- [ ] Add genre field
+- [ ] Make a way to add multiple genres (select and append to an array?)
 - [ ] Add activity status field (input of type select)
-- [ ] Create simple table on SQLite to store those info
-- [ ] For SQLite FK enforcements, run ```PRAGMA foreign_keys = ON```
+- [x] Create simple table on SQLite to store those info
+- [x] For SQLite FK enforcements, run ```PRAGMA foreign_keys = ON```
 - [ ] Create enum file for band table fgstatus column
+- [ ] Create a method to get band genres and concatenate them into one string
 
 ### band table
 
