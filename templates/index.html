@@ -64,10 +64,10 @@
 		<tbody>
 			{% for band in bands %}
 				<tr>
-					<th scope="row">{{ band["nmband"] }}</th>
-					<td>{{ band["nmcountry"]}}</td>
-					<td>genre placeholder</td>
-					<td>{{ band["fgstatus"] }}</td>
+					<th scope="row">{{ band["name"] }}</th>
+					<td>{{ band["country"]}}</td>
+					<td>{{ band["genre"] }}</td>
+					<td>{{ band["status"] }}</td>
 				</tr>
 			{% endfor %}
 		</tbody>
