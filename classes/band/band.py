@@ -1,13 +1,10 @@
-from sql_query.get_band_genre_sql import getBandGenreSql
-from sql_query.get_band_sql import getBandSql
 from enums.band_fgstatus_enum import BandStatus
-from classes.utils import Utils
+from repositories.band_repository import BandRepository
 
 
 class Band:
     def getBandGenres(self, cdband):
-        conn = Utils.get_db_connection()
-        genres = conn.execute(getBandGenreSql.get_sql, [int(cdband)]).fetchall()
+        genres = BandRepository().get_band_genres(cdband)
 
         band_genres = []
         for genre in genres:
@@ -29,9 +26,7 @@ class Band:
                 return "Unknown"
 
     def getBands(self):
-        conn = Utils.get_db_connection()
-        bands = conn.execute(getBandSql.get_sql).fetchall()
-        conn.close()
+        bands = BandRepository().get_all_bands()
 
         dictbands = []
 
