@@ -1,7 +1,28 @@
-# metal-repo
+# metal-repo: The Personal Metal Archive
 
 A repository to log metal albums, rate songs, comment reviews and keep track of
-your personal metal taste.
+your metal taste.
+
+## Project status
+
+- MVP under development
+
+## Technologies
+
+- Python/Flask
+- SQLite3
+- Jinja
+
+## Installation setup
+
+- TBA
+
+## Features
+
+- Register bands and albums
+- Rate bands, albums and songs
+- Keep track of what you are currently listening to
+- Log what you are planning to listen to
 
 ## To-do
 
