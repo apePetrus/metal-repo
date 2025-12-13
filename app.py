@@ -1,4 +1,5 @@
 from flask import Flask, redirect, render_template, request, url_for
+from classes.band.band import Band
 
 
 app = Flask(__name__)
@@ -8,6 +9,7 @@ band_array = []
 
 @app.route("/")
 def index():
+    bands = Band().getBands()
 
     return render_template("index.html", bands=bands)
 
