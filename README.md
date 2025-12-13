@@ -63,3 +63,10 @@ a link to the band)
 
 - [ ] Restructure the project's directories (backend/frontend/database) to
 better management
+
+---
+
+## Progress log and development history
+
+Check progress log, development history and the old to-do list regarding
+the initial development phases of the project on [PROGRESS_LOG](/PROGRESS_LOG.md)
