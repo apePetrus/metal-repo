@@ -1,7 +1,7 @@
 # metal-repo: The Personal Metal Archive
 
-A repository to log metal albums, rate songs, comment reviews and keep track of
-your metal taste.
+Unleash your ultimate metal library. Log, rate, and meticulously track every
+band and album that shapes your personal metal canon.
 
 ---
 
