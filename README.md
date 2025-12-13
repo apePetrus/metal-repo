@@ -59,11 +59,6 @@ a link to the band)
 - [ ] Let user to add albums to a "Listened To" list
 - [ ] Let user to add albums to a "Plan to Listen" list
 
-### Infrastructure/General improvements tasks
-
-- [ ] Restructure the project's directories (backend/frontend/database) to
-better management
-
 ---
 
 ## Progress log and development history

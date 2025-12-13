@@ -2,6 +2,17 @@
 
 ---
 
+## Development history
+
+### Infrastructure/General improvements tasks
+
+- [x] Restructure the project's directories (backend/frontend/database) to
+better management
+
+Using the repository pattern, separating directories on their specific usage.
+
+---
+
 ## Historical archival: initial development phase
 
 Below is the to-do list used to start the initial development phase of the project
