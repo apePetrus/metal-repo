@@ -15,3 +15,8 @@ class DbConnector:
     def execute_script(self, script):
         with self.get_db_connection() as conn:
             conn.executescript(script)
+
+    def execute_insert(self, query, params=()):
+        with self.get_db_connection() as conn:
+            data = conn.execute(query, params)
+            return data.lastrowid
