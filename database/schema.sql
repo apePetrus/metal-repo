@@ -11,6 +11,15 @@ CREATE TABLE IF NOT EXISTS band (
     FOREIGN KEY (cdcountry) REFERENCES country (cdcountry)
 );
 
+CREATE TABLE IF NOT EXISTS album (
+    cdalbum INTEGER PRIMARY KEY,
+    nmalbum VARCHAR(50) NOT NULL,
+    dtrelease INTEGER NOT NULL,
+    fgtype INTEGER NOT NULL,
+    cdband INTEGER NOT NULL,
+    FOREIGN KEY (cdband) REFERENCES band (cdband)
+);
+
 CREATE TABLE IF NOT EXISTS genre (
     cdgenre INTEGER PRIMARY KEY,
     nmgenre VARCHAR(20) NOT NULL
