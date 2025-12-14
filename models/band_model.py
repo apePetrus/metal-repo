@@ -11,15 +11,14 @@ class BandModel:
         return band_genres
 
     def get_band_status(self, status):
-        match status:
-            case BandStatus.ACTIVE.value:
-                return "Active"
-            case BandStatus.SPLIT_UP.value:
-                return "Split up"
-            case BandStatus.CHANGED_NAME.value:
-                return "Changed name"
-            case BandStatus.UNKNOWN.value:
-                return "Unknown"
+        STATUS_MAPPING = {
+            BandStatus.ACTIVE.value: "Active",
+            BandStatus.SPLIT_UP.value: "Split up",
+            BandStatus.CHANGED_NAME.value: "Changed name",
+            BandStatus.UNKNOWN.value: "Unknown"
+        }
+
+        return STATUS_MAPPING.get(status, "Unknown")
 
     def get_all_bands(self):
         bands = BandRepository().get_all_bands()
