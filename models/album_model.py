@@ -1,8 +1,14 @@
-from datetime import datetime
 from enums.album_fgtype_enum import AlbumType
 
 
 class AlbumModel:
+    def __init__(self, data):
+        self.cdalbum = data["cdalbum"]
+        self.nmalbum = data["nmalbum"]
+        self.dtrelease = data["dtrelease"]
+        self.fgtype = data["fgtype"]
+        self.nmband = data["nmband"]
+
     @staticmethod
     def _get_album_type(type):
         TYPE_MAPPING = {
@@ -18,7 +24,3 @@ class AlbumModel:
         }
 
         return TYPE_MAPPING.get(type, "Unknown")
-
-    @staticmethod
-    def _format_date(date):
-        return datetime.fromtimestamp(date).strftime("%Y-%m-%d")
