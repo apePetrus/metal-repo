@@ -1,4 +1,5 @@
 from enums.album_fgtype_enum import AlbumType
+from utils.date_utils import format_epoch_to_str
 
 
 class AlbumModel:
@@ -24,3 +25,19 @@ class AlbumModel:
         }
 
         return TYPE_MAPPING.get(type, "Unknown")
+
+    @property
+    def release_date(self):
+        return format_epoch_to_str(self.dtrelease)
+
+    @property
+    def type_description(self):
+        return AlbumModel._get_album_type(self.fgtype)
+
+    def to_dict(self):
+        return {
+            "album_name": self.nmalbum,
+            "release": self.release_date,
+            "type": self.type_description,
+            "band_name": self.nmband
+        }
