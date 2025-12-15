@@ -10,3 +10,4 @@ class AlbumType(Enum):
     COMPILATION = 6
     BOXED_SET = 7
     VIDEO = 8
+    UNKNOWN = 9
