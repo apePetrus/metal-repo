@@ -3,14 +3,22 @@ from repositories.band_repository import BandRepository
 
 
 class BandModel:
-    def get_band_genres(self, cdband):
+    def __init__(self, data) -> None:
+        self.cdband = data["cdband"]
+        self.nmband = data["nmband"]
+        self.nmcountry = data["nmcountry"]
+        self.fgstatus = data["fgstatus"]
+
+    @staticmethod
+    def _get_band_genres(cdband):
         genres = BandRepository().get_band_genres(cdband)
 
         band_genres = ", ".join(genre["nmgenre"] for genre in genres)
 
         return band_genres
 
-    def get_band_status(self, status):
+    @staticmethod
+    def _get_band_status(status):
         STATUS_MAPPING = {
             BandStatus.ACTIVE.value: "Active",
             BandStatus.SPLIT_UP.value: "Split up",
@@ -20,19 +28,18 @@ class BandModel:
 
         return STATUS_MAPPING.get(status, "Unknown")
 
-    def get_all_bands(self):
-        bands = BandRepository().get_all_bands()
+    @property
+    def band_genre(self):
+        return BandModel._get_band_genres(self.cdband)
 
-        dictbands = []
+    @property
+    def band_status(self):
+        return BandModel._get_band_status(self.fgstatus)
 
-        for band in bands:
-            dictbands.append(
-                {
-                    "name": band["nmband"],
-                    "country": band["nmcountry"],
-                    "genre": self.get_band_genres(band["cdband"]),
-                    "status": self.get_band_status(band["fgstatus"]),
-                }
-            )
-
-        return dictbands
+    def to_dict(self):
+        return {
+            "name": self.nmband,
+            "country": self.nmcountry,
+            "genre": self.band_genre,
+            "status": self.band_status
+        }

@@ -1,12 +1,12 @@
 from flask import Blueprint, redirect, render_template, request, url_for
-from models.band_model import BandModel
+from services.band_service import BandService
 
 band_bp = Blueprint("band", __name__)
 
 
 @band_bp.route("/")
 def index():
-    bands = BandModel().get_all_bands()
+    bands = BandService().get_all_bands()
 
     return render_template("index.html", bands=bands)
 
