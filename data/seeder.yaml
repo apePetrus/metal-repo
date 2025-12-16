@@ -1,0 +1,169 @@
+# Initial seeding file
+
+metadata:
+  countries:
+    - id: 1
+      name: "Brazil"
+    - id: 2
+      name: "USA"
+    - id: 3
+      name: "Japan"
+    - id: 4
+      name: "Canada"
+    - id: 5
+      name: "India"
+
+  genres:
+    - id: 1
+      name: "Power Metal"
+    - id: 2
+      name: "Thrash Metal"
+    - id: 3
+      name: "Death Metal"
+    - id: 4
+      name: "Heavy Metal"
+    - id: 5
+      name: "Progressive Metal"
+    - id: 6
+      name: "Nu Metal"
+    - id: 7
+      name: "Alternative Metal"
+    - id: 8
+      name: "Visual Kei"
+    - id: 9
+      name: "Metalcore"
+    - id: 10
+      name: "Djent"
+    - id: 11
+      name: "Rap Metal"
+
+bands:
+  - id: 1
+    nmband: "Angra"
+    cdcountry: 1 # Brazil
+    fgstatus: 1 # ACTIVE
+    genres: [1, 5] # Power Metal, Progressive Metal
+    albums:
+      - nmalbum: "Angels Cry"
+        dtrelease: 757555200 # 1993-11-03
+        fgtype: 1 # FULL_LENGTH
+      - nmalbum: "Holy Land"
+        dtrelease: 859344000 # 1996-04-25
+        fgtype: 1
+
+  - id: 2
+    nmband: "Megadeth"
+    cdcountry: 2 # USA
+    fgstatus: 1 # ACTIVE
+    genres: [2, 4] # Thrash Metal, Heavy Metal
+    albums:
+      - nmalbum: "Rust in Peace"
+        dtrelease: 654876000 # 1990-09-24
+        fgtype: 1
+      - nmalbum: "Peace Sells... But Who's Buying?"
+        dtrelease: 528076800 # 1986-09-23
+        fgtype: 1
+
+  - id: 3
+    nmband: "Cannibal Corpse"
+    cdcountry: 2 # USA
+    fgstatus: 1 # ACTIVE
+    genres: [3] # Death Metal
+    albums:
+      - nmalbum: "Tomb of the Mutilated"
+        dtrelease: 713606400 # 1992-08-11
+        fgtype: 1
+      - nmalbum: "Vile"
+        dtrelease: 859344000 # 1996-05-21
+        fgtype: 1
+
+  - id: 4
+    nmband: "Sepultura"
+    cdcountry: 1 # Brazil
+    fgstatus: 1 # ACTIVE
+    genres: [2, 7] # Thrash Metal, Alternative Metal
+    albums:
+      - nmalbum: "Chaos A.D."
+        dtrelease: 752198400 # 1993-09-02
+        fgtype: 1
+      - nmalbum: "Roots"
+        dtrelease: 825158400 # 1996-03-12
+        fgtype: 1
+
+  - id: 5
+    nmband: "Queensrÿche"
+    cdcountry: 2 # USA
+    fgstatus: 1 # ACTIVE
+    genres: [5, 4] # Progressive Metal, Heavy Metal
+    albums:
+      - nmalbum: "Operation: Mindcrime"
+        dtrelease: 578617200 # 1988-05-03
+        fgtype: 1
+      - nmalbum: "Empire"
+        dtrelease: 650962800 # 1990-08-20
+        fgtype: 1
+
+  - id: 6
+    nmband: "Korn"
+    cdcountry: 2 # USA
+    fgstatus: 1 # ACTIVE
+    genres: [6] # Nu Metal
+    albums:
+      - nmalbum: "Korn"
+        dtrelease: 782079600 # 1994-10-11
+        fgtype: 1
+      - nmalbum: "Follow the Leader"
+        dtrelease: 903429600 # 1998-08-18
+        fgtype: 1
+
+  - id: 7
+    nmband: "Dream Theater"
+    cdcountry: 2 # USA
+    fgstatus: 1 # ACTIVE
+    genres: [5] # Progressive Metal
+    albums:
+      - nmalbum: "Images and Words"
+        dtrelease: 709142400 # 1992-07-07
+        fgtype: 1
+      - nmalbum: "Metropolis Pt. 2: Scenes from a Memory"
+        dtrelease: 940924800 # 1999-10-26
+        fgtype: 1
+
+  - id: 8
+    nmband: "Tool"
+    cdcountry: 2 # USA
+    fgstatus: 1 # ACTIVE
+    genres: [7] # Alternative Metal
+    albums:
+      - nmalbum: "Lateralus"
+        dtrelease: 990158400 # 2001-05-15
+        fgtype: 1
+      - nmalbum: "Ænima"
+        dtrelease: 843811200 # 1996-09-17
+        fgtype: 1
+
+  - id: 9
+    nmband: "Bloodywood"
+    cdcountry: 5 # India
+    fgstatus: 1 # ACTIVE
+    genres: [11] # Rap Metal
+    albums:
+      - nmalbum: "Rakshak"
+        dtrelease: 1644796800 # 2022-02-14
+        fgtype: 1
+      - nmalbum: "Anti-Pop Vol. 1"
+        dtrelease: 1530396000 # 2018-07-01
+        fgtype: 6 # COMPILATION
+
+  - id: 10
+    nmband: "HANABIE."
+    cdcountry: 3 # Japan
+    fgstatus: 1 # ACTIVE
+    genres: [9, 8, 10] # Metalcore, Visual Kei, Djent
+    albums:
+      - nmalbum: "Hanabie"
+        dtrelease: 1686700800 # 2023-06-14
+        fgtype: 1
+      - nmalbum: "Cherry Blossoms Are Falling"
+        dtrelease: 1667088000 # 2022-10-30
+        fgtype: 2 # EP
