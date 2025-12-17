@@ -1,41 +1,40 @@
 # Initial seeding file
 
-metadata:
-  countries:
-    - id: 1
-      name: "Brazil"
-    - id: 2
-      name: "USA"
-    - id: 3
-      name: "Japan"
-    - id: 4
-      name: "Canada"
-    - id: 5
-      name: "India"
+countries:
+  - id: 1
+    name: "Brazil"
+  - id: 2
+    name: "USA"
+  - id: 3
+    name: "Japan"
+  - id: 4
+    name: "Canada"
+  - id: 5
+    name: "India"
 
-  genres:
-    - id: 1
-      name: "Power Metal"
-    - id: 2
-      name: "Thrash Metal"
-    - id: 3
-      name: "Death Metal"
-    - id: 4
-      name: "Heavy Metal"
-    - id: 5
-      name: "Progressive Metal"
-    - id: 6
-      name: "Nu Metal"
-    - id: 7
-      name: "Alternative Metal"
-    - id: 8
-      name: "Visual Kei"
-    - id: 9
-      name: "Metalcore"
-    - id: 10
-      name: "Djent"
-    - id: 11
-      name: "Rap Metal"
+genres:
+  - id: 1
+    name: "Power Metal"
+  - id: 2
+    name: "Thrash Metal"
+  - id: 3
+    name: "Death Metal"
+  - id: 4
+    name: "Heavy Metal"
+  - id: 5
+    name: "Progressive Metal"
+  - id: 6
+    name: "Nu Metal"
+  - id: 7
+    name: "Alternative Metal"
+  - id: 8
+    name: "Visual Kei"
+  - id: 9
+    name: "Metalcore"
+  - id: 10
+    name: "Djent"
+  - id: 11
+    name: "Rap Metal"
 
 bands:
   - id: 1
