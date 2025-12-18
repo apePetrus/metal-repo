@@ -18,6 +18,12 @@ INSERT_BAND_GENRE_SQL = """
     )
 """
 
+COUNT_GENRE_SQL = """
+    SELECT COUNT(1) AS COUNT
+    FROM genre
+    WHERE nmgenre = :nmgenre
+"""
+
 
 class SeederRepository:
     def save_genre_ref(self, nmgenre):
@@ -29,3 +35,8 @@ class SeederRepository:
 
     def save_band_genre(self, rel_data):
         DbConnector().execute_insert(INSERT_BAND_GENRE_SQL, rel_data)
+
+    def count_genre(self, nmgenre):
+        count = DbConnector().execute_insert(
+            INSERT_GENRE_REF_SQL, {"nmgenre": nmgenre}
+        )

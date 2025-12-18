@@ -1,5 +1,7 @@
 import yaml
 
+from data.seeder_repository import SeederRepository
+
 class Seeder:
     def __init__(self) -> None:
         pass
@@ -9,7 +11,15 @@ class Seeder:
             try:
                 return yaml.safe_load(stream)[key]
             except yaml.YAMLError as exc:
-                return exc
+                raise exc
+
+    def insert_genres(self):
+        genres = self._load_yaml_by_key('genres')
+        names = [genre["name"] for genre in genres]
+
+        for name in names:
+            SeederRepository().save_genre_ref(name)
 
     def yaml_test(self):
-        print(self._load_yaml_by_key('genres')[0])
+        pass
+        # self.insert_genres()
