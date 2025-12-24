@@ -19,6 +19,18 @@ GET_BAND_GENRE_SQL = """
     WHERE band.cdband = ?
 """
 
+INSERT_BAND_SQL = """
+    INSERT INTO band (
+        nmband,
+        cdcountry,
+        fgstatus
+    ) VALUES (
+        :nmband,
+        :cdcountry,
+        :fgstatus
+    )
+"""
+
 
 class BandRepository:
     def get_all_bands(self):
@@ -30,3 +42,8 @@ class BandRepository:
         band_genres_raw = DbConnector().execute_query(GET_BAND_GENRE_SQL, [int(cdband)])
 
         return band_genres_raw
+
+    def save_band(self, band_data):
+        cdband = DbConnector().execute_insert(INSERT_BAND_SQL, band_data)
+
+        return cdband
